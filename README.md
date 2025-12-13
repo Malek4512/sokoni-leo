@@ -1,147 +1,111 @@
-Project Plan: Local Market Price Tracker
-1. Project Overview
+# Sokoni Leo 🌍
 
-Name: Local Market Price Tracker
-Objective: Develop a system that tracks and displays real-time or regularly updated market prices for key commodities (e.g., maize, rice, sugar, fish) across different regions.
-Target Users: Farmers, traders, market analysts, and the general public.
-Key Channels: SMS, WhatsApp bot, and Web application.
-Data Source: Crowdsourced and verified user submissions.
-2. Key Features
+![GitHub Release](https://img.shields.io/github/v/release/Malek4512/sokoni-leo?color=brightgreen&label=Latest%20Release)
 
-    Regional price listings for commodities.
+Welcome to **Sokoni Leo**! This repository serves as a hub for developing and deploying a versatile platform that integrates various technologies to enhance business operations. Our focus lies in creating a seamless experience for users through effective use of tools like AWS, React, Node.js, and more.
 
-    Crowd submission of prices with verification.
+## Table of Contents
 
-    Admin panel for managing submissions.
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-    SMS interface for offline users.
+## Introduction
 
-    WhatsApp bot for chatbot interaction.
+Sokoni Leo is designed to facilitate business interactions and improve customer engagement through modern web technologies. The project aims to build a robust system that can handle various functionalities, such as SMS notifications and WhatsApp integrations, to ensure that businesses can reach their customers effectively.
 
-    Web app with a dashboard and analytics.
+## Technologies Used
 
-3. Timeline (Gantt-style Milestones)
-Phase	Description	Duration
-Requirement Analysis	Define features, roles, and data flow	1 week
-Design	UI/UX for web, chatbot flows, SMS command structure	1 week
-Backend Development	API, database, admin panel	2 weeks
-Frontend & Bot Dev	Web app, WhatsApp integration	2 weeks
-SMS Integration	Integrate SMS gateway and keyword logic	1 week
-Testing & QA	Validate all flows and data accuracy	1 week
-Deployment & Feedback	Go live + pilot testing in one region	1 week
-Expansion	Roll out to more regions + optimize	Ongoing
-4. Tools & Technologies
+This project utilizes a range of technologies to ensure optimal performance and user experience:
 
-    Frontend: React / HTML-CSS / Bootstrap
+- **AWS**: For cloud hosting and storage solutions.
+- **Node.js**: For server-side scripting and building APIs.
+- **React**: For creating dynamic user interfaces.
+- **PostgreSQL**: For reliable database management.
+- **CSS & HTML**: For structuring and styling web pages.
+- **JavaScript**: For client-side scripting.
+- **Vite**: For fast development and build processes.
+- **SMS API**: For sending notifications to users.
+- **WhatsApp Bot**: For engaging with customers through WhatsApp.
 
-    Backend: Node.js or Django / Flask
+## Installation
 
-    Database: PostgreSQL or MongoDB
+To get started with Sokoni Leo, you need to download and execute the latest release. You can find it [here](https://github.com/Malek4512/sokoni-leo/releases). 
 
-    Bot: Twilio WhatsApp API / Dialogflow
+### Step-by-Step Installation
 
-    SMS: Africa’s Talking / Twilio SMS API
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Malek4512/sokoni-leo.git
+   cd sokoni-leo
+   ```
 
-    Hosting: AWS / DigitalOcean / Heroku
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-📄 Software Requirements Specification (SRS)
-1. Introduction
-1.1 Purpose
+3. **Set Up Environment Variables**
+   Create a `.env` file in the root directory and add the necessary configuration. Refer to the `.env.example` for required variables.
 
-To design and implement a system that enables users to view, submit, and retrieve market prices of key agricultural and consumer goods across different regions.
-1.2 Scope
+4. **Run the Application**
+   ```bash
+   npm start
+   ```
 
-The system supports:
+5. **Access the Application**
+   Open your web browser and navigate to `http://localhost:3000`.
 
-    Display of commodity prices by region
+## Usage
 
-    Crowdsourced data submissions
+Once the application is running, you can start using its features. The user interface is designed to be intuitive, allowing you to navigate through various sections easily.
 
-    Multi-platform access (SMS, WhatsApp, Web)
+### Key Functionalities
 
-    Role-based access for admins and users
+- **User Registration**: Users can sign up and create an account.
+- **SMS Notifications**: Businesses can send SMS alerts to users.
+- **WhatsApp Integration**: Engage with customers through WhatsApp messages.
+- **Data Management**: Use PostgreSQL to manage and query data efficiently.
 
-1.3 Definitions
+## Features
 
-    Commodity: Item being priced (e.g., maize)
+Sokoni Leo comes with a variety of features that enhance user experience and streamline business processes:
 
-    Crowdsourced Data: User-submitted price information
+- **Responsive Design**: The application is fully responsive, ensuring usability on both desktop and mobile devices.
+- **Real-time Notifications**: Users receive instant notifications through SMS and WhatsApp.
+- **Secure Authentication**: User data is protected with secure authentication methods.
+- **Data Analytics**: Businesses can access analytics to track user engagement and improve services.
 
-    Verified Price: Admin-approved or majority-voted data
+## Contributing
 
-2. System Features
-2.1 View Prices
+We welcome contributions to Sokoni Leo! If you want to help improve the project, please follow these steps:
 
-    View latest commodity prices by selecting region and item.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Create a pull request.
 
-    Filter by date, location, and commodity type.
+Please ensure that your code adheres to the existing coding standards and includes relevant tests.
 
-2.2 Submit Price
+## License
 
-    Users can submit price data for a specific commodity and region.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-    Include optional photo evidence or market name.
+## Contact
 
-2.3 Admin Panel
+For questions or feedback, feel free to reach out:
 
-    View and approve submitted prices.
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **GitHub**: [Malek4512](https://github.com/Malek4512)
 
-    Manage users and moderate submissions.
+For the latest updates and releases, visit our [Releases](https://github.com/Malek4512/sokoni-leo/releases) section.
 
-2.4 SMS Interface
+---
 
-    Users send SMS in format:
-    PRICE <commodity> <price> <region>
-    or request: GET <commodity> <region>
-
-2.5 WhatsApp Bot
-
-    Respond to keyword inputs like:
-
-        “Prices in Dodoma”
-
-        “Submit maize 1200 Morogoro”
-
-2.6 Web Dashboard
-
-    Interactive UI to view prices on charts, maps.
-
-    Data export and statistics for admins.
-
-3. Non-Functional Requirements
-
-    Scalability: Capable of handling thousands of users daily.
-
-    Reliability: System should have >99% uptime.
-
-    Security: Authenticated admin access, data validation.
-
-    Performance: Query response in under 2 seconds.
-
-    Usability: Simple interfaces for low-tech users.
-
-4. System Architecture
-
-    3-tier Architecture:
-
-        Presentation (Web, Bot, SMS)
-
-        Logic (APIs)
-
-        Data (Database)
-
-5. Constraints
-
-    Limited or unreliable internet access in rural areas.
-
-    SMS and WhatsApp cost handling.
-
-    Language localization (e.g., Swahili)
-
-6. Assumptions
-
-    Users have basic literacy or access to mobile phones.
-
-    Admins available to validate price data.
-
-    Pricing updates are frequent but not necessarily real-time.
+Thank you for your interest in Sokoni Leo! We look forward to your contributions and feedback. Together, we can create a powerful platform that enhances business operations and customer interactions.
